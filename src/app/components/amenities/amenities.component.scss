@@ -1,0 +1,35 @@
+/* Add custom styling if needed */
+
+/* Ensure the grid takes full width in all breakpoints */
+.grid {
+  gap: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a202c; /* Tailwind's gray-900 */
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+/* For images/icons, we ensure they are responsive */
+img, svg {
+  width: 24px;
+  height: 24px;
+}
+
+p {
+  color: #4a5568; /* Tailwind's gray-600 */
+}
+
+/* For the hover effect */
+:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

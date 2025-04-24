@@ -1,1 +1,63 @@
-<p>navbar works!</p>
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex-shrink-0">
+        <h1 class="text-2xl font-serif font-bold text-gray-800">
+          Serenity Hotel
+        </h1>
+      </div>
+
+      <!-- Desktop menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
+          <li><a href="#about" class="text-gray-600 hover:text-gray-900">About</a></li>
+          <li><a href="#rooms" class="text-gray-600 hover:text-gray-900">Rooms</a></li>
+          <li><a href="#amenities" class="text-gray-600 hover:text-gray-900">Amenities</a></li>
+          <li><a href="#location" class="text-gray-600 hover:text-gray-900">Location</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Book button -->
+      <div class="hidden md:block">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+          Book Now
+        </button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button  class="text-gray-600 hover:text-gray-900 focus:outline-none">
+          <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div *ngIf="isMenuOpen" class="md:hidden bg-white p-4 shadow-lg">
+    <ul class="space-y-3">
+      <li><a href="#" class="block text-gray-600 hover:text-gray-900">Home</a></li>
+      <li><a href="#about" class="block text-gray-600 hover:text-gray-900">About</a></li>
+      <li><a href="#rooms" class="block text-gray-600 hover:text-gray-900">Rooms</a></li>
+      <li><a href="#amenities" class="block text-gray-600 hover:text-gray-900">Amenities</a></li>
+      <li><a href="#location" class="block text-gray-600 hover:text-gray-900">Location</a></li>
+      <li><a href="#contact" class="block text-gray-600 hover:text-gray-900">Contact</a></li>
+      <li>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md w-full">
+          Book Now
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
